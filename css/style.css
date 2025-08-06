@@ -1,0 +1,164 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap);
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-family: var(--font-family);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 1110px;
+  width: 100%;
+  padding: 0 2rem;
+  margin: 0px auto;
+}
+
+:root {
+  --primary: #666666;
+  --secondary: #85859b;
+  --purple: #7875fe;
+  --slate-gray: #4c5866;
+  --white: #ffffff;
+  --font-family: "Roboto", sans-serif;
+}
+
+/* ================================ HERO ================================ */
+
+.hero {
+  background-color: var(--white);
+}
+
+/* ================================ HEADER ================================ */
+
+.header {
+  padding: 3rem 0;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+
+.nav-list li:first-child {
+  font-size: 3rem;
+  color: var(--slate-gray);
+  display: none;
+}
+
+.nav-link {
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--slate-gray);
+}
+
+.nav-list li:last-child,
+.header-end {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav-list li:last-child i,
+.header-end i {
+  font-size: 2.4rem;
+  color: var(--slate-gray);
+}
+
+.nav-menu i {
+  font-size: 3rem;
+  color: var(--slate-gray);
+  display: none;
+}
+
+.header-end {
+  display: none;
+}
+
+/* ================================ RESPONSIVE ================================ */
+
+@media (max-width: 992px) {
+  /* ================================ HEADER ================================ */
+
+  .header {
+    position: relative;
+  }
+
+  .header-nav {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    padding: 2rem;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-list {
+    justify-content: space-between;
+  }
+
+  .nav-list li:last-child {
+    display: none;
+  }
+
+  .header-end {
+    display: flex;
+  }
+}
+
+@media (max-width: 576px) {
+  /* ================================ HEADER ================================ */
+
+  .header-logo {
+    display: block;
+    margin: 0px auto;
+    width: 14rem;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .nav-menu i {
+    display: block;
+  }
+
+  .header-end {
+    position: absolute;
+    right: 2rem;
+    bottom: -60%;
+  }
+
+  .nav-list {
+    width: 100%;
+    position: fixed;
+    top: 11.5%;
+    left: 0;
+    z-index: 100;
+    background-color: #ebebeb;
+    padding: 1.5rem 0 8.8rem 1.5rem;
+    display: flex;
+    transform: translateX(-100%);
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.2s;
+  }
+
+  .nav-list.show {
+    transform: translateX(0);
+  }
+
+  .nav-list li:first-child {
+    display: block;
+  }
+}
