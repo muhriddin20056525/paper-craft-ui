@@ -25,13 +25,24 @@ html {
   --font-family: "Roboto", sans-serif;
 }
 
+section {
+  padding: 5rem 0;
+}
+
+.btn {
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  padding: 2rem 5rem;
+  max-width: 25.5rem;
+}
+
 /* ================================ HERO ================================ */
 
 .hero {
   background-color: var(--white);
 }
-
-/* ================================ HEADER ================================ */
 
 .header {
   padding: 3rem 0;
@@ -84,11 +95,71 @@ html {
   display: none;
 }
 
+.hero > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12rem;
+  padding-block-start: 10rem;
+}
+
+.hero-info h1 {
+  font-weight: 400;
+  font-size: 6rem;
+  line-height: 100%;
+  color: var(--slate-gray);
+  max-width: 44rem;
+  margin-bottom: 3rem;
+}
+
+.hero-info p {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 150%;
+  color: var(--secondary);
+  max-width: 45rem;
+  margin-bottom: 3rem;
+}
+
+/* ================================ VARIANTS ================================ */
+
+.variants {
+  background: #c0c0c0;
+}
+
+.variants .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.variants-box {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 0 0;
+}
+
+.variants-box h4 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 150%;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.variants-box p {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 150%;
+  color: #85859b;
+}
+
 /* ================================ RESPONSIVE ================================ */
-
 @media (max-width: 992px) {
-  /* ================================ HEADER ================================ */
-
+  /* ================================ HERO ================================ */
   .header {
     position: relative;
   }
@@ -113,6 +184,18 @@ html {
 
   .header-end {
     display: flex;
+  }
+
+  .hero > .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 5rem;
+  }
+
+  /* ================================ VARIANTS ================================ */
+
+  .variants .container {
+    flex-wrap: wrap;
   }
 }
 
@@ -160,5 +243,13 @@ html {
 
   .nav-list li:first-child {
     display: block;
+  }
+
+  /* ================================ VARIANTS ================================ */
+
+  .variants-box {
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
