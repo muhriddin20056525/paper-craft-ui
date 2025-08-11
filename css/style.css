@@ -138,7 +138,7 @@ section {
 /* ================================ VARIANTS ================================ */
 
 .variants {
-  background: #c0c0c0;
+  background: #ebebeb;
 }
 
 .variants .container {
@@ -174,7 +174,7 @@ section {
 /* ================================ ABOUT ================================ */
 
 .about {
-  background-color: #c0c0c0;
+  background-color: #ebebeb;
 }
 
 .about .container {
@@ -240,8 +240,75 @@ section {
   bottom: 0px;
 }
 
-/* ================================ RESPONSIVE ================================ */
+/* ================================ PARTNERS ================================ */
 
+.partners {
+  padding-block: 9rem;
+  background-color: #ebebeb;
+}
+
+.partners .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+/* ================================ SHOWCASE ================================ */
+
+.showcase .container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.showcase .section-title {
+  margin-bottom: 0.8rem;
+}
+
+.showcase .section-description {
+  margin-bottom: 3rem;
+}
+
+.showcase .btn {
+  width: 25.5rem;
+  max-width: 100%;
+}
+
+/* ================================ FOOTER ================================ */
+
+.footer {
+  padding: 3rem 0;
+  background-color: var(--slate-gray);
+}
+
+.footer .container,
+.footer-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-list {
+  gap: 3rem;
+}
+
+.footer-item i {
+  color: var(--white);
+  font-size: 2.4rem;
+}
+
+.copyright {
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: var(--slate-gray);
+}
+
+/* ================================ RESPONSIVE ================================ */
 @media (max-width: 992px) {
   /* ================================ HERO ================================ */
   .header {
@@ -296,6 +363,18 @@ section {
   .services-card a {
     position: relative;
     margin-top: 2rem;
+  }
+
+  /* ================================ PARTNERS ================================ */
+  .partners .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* ================================ SHOWCASE ================================ */
+
+  .showcase .container {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -363,5 +442,12 @@ section {
 
   .services .container {
     grid-template-columns: 1fr;
+  }
+
+  /* ================================ FOOTER ================================ */
+  .footer .container,
+  .footer-list {
+    flex-wrap: wrap;
+    gap: 3rem;
   }
 }
